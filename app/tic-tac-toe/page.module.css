@@ -1,0 +1,79 @@
+/* page.module.css */
+
+/* 1. מרכוז כל תוכן העמוד */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* מרכז אופקית */
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* 2. עיצוב הכותרת הראשית */
+.header {
+    font-size: 4em; /* גודל גדול */
+    font-weight: 800;
+    color: #4A90E2; /* כחול נעים */
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 3. עיצוב הוראות המשחק */
+.instructions {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 40px;
+    text-align: center;
+    max-width: 600px;
+}
+
+/* 4. עיצוב הסטטוס (תור וניצחון) */
+.status {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 5. עיצוב הריבוע - הפוך לגדול ומרווח יותר */
+.square {
+    background: #f0f0f0; /* רקע אפור בהיר */
+    border: 4px solid #4A90E2; /* מסגרת כחולה */
+    font-size: 50px; /* גופן גדול */
+    font-weight: 900;
+    line-height: 80px;
+    height: 90px; /* גובה הריבוע */
+    width: 90px; /* רוחב הריבוע */
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+    float: left;
+    margin: 0; /* מוריד רווחים פנימיים */
+    transition: background 0.2s;
+}
+
+.square:hover {
+    background: #e0e0e0;
+}
+
+/* 6. סידור השורות */
+.boardRow {
+    clear: both;
+    display: flex; /* משתמשים ב-Flexbox ליישור קל יותר */
+    border-spacing: 0;
+}
+
+/* הסרת קווי המסגרת הכפולים בתוך הלוח */
+.boardRow:first-child .square {
+    border-top: none;
+}
+.boardRow:last-child .square {
+    border-bottom: none;
+}
+.boardRow .square:first-child {
+    border-left: none;
+}
+.boardRow .square:last-child {
+    border-right: none;
+}
