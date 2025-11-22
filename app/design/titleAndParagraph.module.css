@@ -1,6 +1,7 @@
 .container {
     direction: rtl; 
-    width: 398px; 
+        width: 90%;
+
     /* margin-top: 20px;  */
     /* מרווח תחתון קל כדי להפריד ממקטעים אחרים */
 }

@@ -1,6 +1,6 @@
 /* *** 1. כללי המיכל הראשי של הבלוק (398px) *** */
 .sectionBlockRight, .sectionBlockLeft {
-    width: 398px; 
+    width: 90%;
     text-align: right; 
     margin-top: -70px;
     margin-bottom: -70px;
