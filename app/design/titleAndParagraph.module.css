@@ -1,0 +1,28 @@
+.container {
+    direction: rtl; 
+    width: 398px; 
+    /* margin-top: 20px;  */
+    /* מרווח תחתון קל כדי להפריד ממקטעים אחרים */
+}
+
+/* **עיצוב הכותרת (H4)** */
+.header {
+    font-size: 14px;
+    font-family: system-ui, sans-serif;
+    font-weight: bold;
+    margin: 0; 
+    order: 2; /* ודא שהכותרת מופיעה שנייה בטור (למטה) */
+
+}
+
+/* **עיצוב גוף הפסקה (בתוך content)** */
+.content p {
+    /* הכללים הקודמים היו 16px, אנו מחליפים אותם ל-14px עם הגופן החדש */
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 15px; 
+    text-align: right; 
+    direction: rtl;
+    font-weight: 500;
+     margin-top: 7px;
+}   

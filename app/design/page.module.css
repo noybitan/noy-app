@@ -1,72 +1,99 @@
+/* *** כללי הריכוז של המיכל הראשי (נשארים זהים) *** */
 .mainContentContainer {
-    /* **עיצוב רוחב ומיקום מדויק מפיגמה:** */
-    width: 440px; /* רוחב קבוע כפי שנדרש */
+    width: 440px; 
     margin-left: auto;
-    margin-right: auto; /* מרכוז המלבן במרכז הדף */
-    
-    /* **עיצוב פנימי (Flexbox) מדויק מפיגמה:** */
-    display: flex; /* הפוך את המיכל למיכל Flex */
-    flex-direction: column; /* סדר את התוכן בטור (אחד מתחת לשני) */
-    align-items: center; /* מרכז את התוכן בתוך המיכל בציר הרוחב (אם יש רוחב פנימי) */
-    
-    /* **ריווח פנימי וחיצוני מדויק מפיגמה:** */
-    padding: 55px 0; /* 55px ריווח למעלה ולמטה, 0 ריווח בצדדים (התוכן ייצמד לקצוות הרוחב 440px) */
-    gap: 55px; /* מרווח בין האלמנטים הנפרדים בתוך המיכל (כגון בין הכותרת לגוף הטקסט) */
-    
-    /* **עיצוב ויזואלי** */
+    margin-right: auto;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; /* מרכוז הלוגו והכותרת הראשית */
+    gap: 30px; /* המרווח הכללי בין המקטעים הראשיים */
+    padding: 55px 0; 
     background-color: #FFFFFF; 
-    /* min-height: 500px; */ /* אפשר למחוק את זה אחרי בדיקה */
-    /* border: 1px solid #ddd; */ /* אפשר למחוק את זה אחרי בדיקה */
 }
 
-/* **עיצוב הלוגו (קלאס: .logo)** */
+/* **1. עיצוב הלוגו (51x51)** */
 .logo {
-    /* מידות מדויקות מפיגמה */
     width: 51px;
     height: 51px; 
-    /* aspect-ratio מבטיח שצורת הריבוע נשמרת */
     aspect-ratio: 1/1; 
-    /* הלוגו עדיין ממורכז אוטומטית בזכות align-items: center במיכל האב. */
-}
-/* **עיצוב הכותרת הראשית (קלאס: .mainTitle)** */
-.mainTitle {
-    /* עיצוב טקסט מדויק מפיגמה */
-    color: #000; /* שחור מוחלט */
-    text-align: center;
-    font-family: SimplerPro_HLAR, sans-serif; /* ודאי שהגופן נטען */
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 900; /* משקל גופן כבד */
-    line-height: normal; /* גובה שורה סטנדרטי */
-    letter-spacing: -0.3px;
-    
-    /* הגדרות גודל ומיקום */
-    height: 32px; /* גובה קבוע, אם כי גובה השורה (line-height) לרוב קובע את זה */
-    /* align-self: stretch; *//**אין צורך בזה כשהאב הוא flex-direction: column**
-                                      /* מכיוון שהרוחב נקבע על ידי התוכן או על ידי הגדרות רוחב במיכל האב.
-                                      /* נשאר עם width: 100% אם צריך למלא את רוחב 440px. */
-    width: 100%; /* כדי שימלא את כל רוחב המיכל הצר. */
-    
-    /* מוודאים שכללי הגופן הדקים יותר לא ידרסו את ה-font-weight 900: */
-    margin: 0; 
 }
 
-/* **עיצוב כותרת המשנה (קלאס: .subTitle)** */
+/* **2. עיצוב הכותרת הראשית (30px, מודגש)** */
+.mainTitle {
+    color: #000; 
+    text-align: center;
+    font-family: system-ui, sans-serif;
+    font-weight: bolder;
+    /* font-family: SimplerPro_HLAR, sans-serif; אם הגופן לא נטען, ישתמש בברירת מחדל */
+    font-size: 30px;
+    line-height: normal;
+    letter-spacing: -0.3px;
+    width: 100%; 
+    margin: 0; /* מונע שוליים עודפים */
+}
+
+/* **3. עיצוב הקו המפריד הדק** */
+.headerDivider {
+    width: 193px; 
+    height: 0; 
+    border-bottom: 1px solid #000; /* הקו עצמו */
+    margin-left: auto; 
+    margin-right: auto;
+    
+    /* מרווח אנכי סביב הקו - נראה קטן מאוד בעיצוב המקורי */
+    margin-top: -30px; /* מזיז אותו למעלה קרוב יותר לכותרת הראשית */
+    margin-bottom: -40px; 
+}
+
+/* **4. עיצוב כותרת המשנה (16px, מיושר לימין)** */
 .subTitle {
-    /* עיצוב טקסט מדויק מפיגמה */
     color: #000;
-    text-align: right; /* *** יישור לימין! *** */
-    font-family: Arial, sans-serif; /* תחליף לגופן SimplerPro */
+    text-align: center; 
+    font-family: system-ui, sans-serif;    
     font-size: 16px;
-    font-style: normal;
-    font-weight: 600; /* משקל גופן מודגש בינוני */
-    line-height: 15px; /* גובה שורה */
-    letter-spacing: -0.16px;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 20px /* משקל גופן Semi-Bold */
+    /* שאר הכללים נשארים... */
+}
+/* *** אם רוצים שהתמונה תופיע משמאל: *** */
+/* *** 1. מיכל Flexbox לסידור זה לצד זה (imageSideBySide) *** */
+.imageSideBySide {
+    /* *** התיקון הקריטי: ודא שהמיכל הוא Flex *** */
+    display: flex !important;
     
-    /* הגדרות גודל ומיקום */
-    height: 16px;
-    width: 100%; /* כדי שתתפוס את כל רוחב 440px */
+    /* *** הפיכת הסדר כדי שהתמונה תהיה מימין *** */
+    flex-direction: row-reverse !important; 
     
-    /* מוסיפים מרווח תחתון קטן כדי לפצות על הקו המפריד שיופיע מתחתיה */
-    margin-bottom: 25px; /* ריווח כלשהו מעל הקו */
+    align-items: flex-start; /* יישור האלמנטים לחלק העליון */
+    width: 100%;
+    gap: 20px; 
+    direction: rtl; 
+     margin-left: -22px !important;
+}
+
+/* *** 2. עיצוב התמונה *** */
+.sideImageStyle {
+    width: 1.5rem; 
+    height: auto; 
+    flex-shrink: 0; 
+    order: 1; /* דוחף לימין */
+}
+.titleAndParagraphContainer {
+    order: 1; /* נדחף לשמאל (צד ראשון) */
+}
+/* כלל זה יופעל רק כאשר רוחב המסך קטן מ-500 פיקסלים */
+@media (max-width: 500px) {
+    
+    .mainContentContainer {
+        /* *** התיקון הקריטי למובייל *** */
+        width: 95%; /* תופס 95% מהרוחב של המסך הנייד (משאיר שוליים קטנים) */
+        max-width: none; /* מבטל כל מגבלה עליונה */
+        padding: 20px 10px; /* מקטין את הריווח הפנימי */
+    }
+    
+    /* הדיאגרמות עשויות להיראות צפופות מדי, ניתן לשנות ל-2 טורים: */
+    .diagramItem {
+        width: 48%; /* כל פריט תופס חצי מהרוחב */
+    }
 }

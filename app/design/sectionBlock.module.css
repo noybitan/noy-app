@@ -1,0 +1,64 @@
+/* *** 1. כללי המיכל הראשי של הבלוק (398px) *** */
+.sectionBlockRight, .sectionBlockLeft {
+    width: 398px; 
+    text-align: right; 
+    margin-top: -70px;
+    margin-bottom: -70px;
+}
+
+/* *** 2. עיצוב שורת הכותרת (הערימה האנכית) *** */
+.headerRow {
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 20px; */
+    margin-bottom: 20px; /* *** קריטי: ודא שהאלמנטים נערמים אנכית *** */
+}
+
+/* *** 3. עיצוב הקו/תמונה המעוצבת *** */
+.redDesignLine {
+    /* *** ניקוי הגדרות גודל שדורסות את התמונה *** */
+    height: auto; 
+    direction: rtl;
+    order: 1; /* ודא שהתמונה מופיעה ראשונה בטור (למעלה) */
+    margin: 0; 
+    margin-right: -22px !important;
+    margin-left: -22px !important;
+    margin-bottom: -15px;
+}
+
+
+/* *** 4. עיצוב הכותרת (הטקסט של המקטע, לדוגמה "הרעיון") *** */
+.sectionHeader {
+    font-size: 14px;
+    font-family: system-ui, sans-serif;
+    font-weight: bold;
+    margin: 0; 
+    order: 2; /* ודא שהכותרת מופיעה שנייה בטור (למטה) */
+    margin-top: 20px; /* מרווח קל בין התמונה לכותרת */
+    margin-bottom: -50px;
+}
+
+/* *** 5. מיקום: ימין (SectionBlockRight) *** */
+.sectionBlockRight .headerRow {
+    align-items: flex-end; /* יישור לימין (לכותרת ולתמונה) */
+    flex-direction: column;
+}
+
+/* *** 6. מיקום: שמאל (SectionBlockLeft) *** */
+.sectionBlockLeft .headerRow {
+    align-items: flex-start; /* יישור לשמאל */
+    flex-direction: column;
+}
+
+
+/* *** 7. עיצוב הפסקאות (בתוך sectionBody) *** */
+.sectionBody p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 15px; 
+    text-align: right; 
+    direction: rtl;
+    font-weight: 500;
+     margin-top: -5px;
+}
+/* בקובץ CSS Modules הרלוונטי */
