@@ -1,7 +1,8 @@
 'use client'; // נשתמש ב-Client Component כי נצטרך לנהל מצב (אם נוסיף אינטראקטיביות)
 import React, { useState, useEffect } from 'react';
 import styles from './page.module.css';
-import { getArtData, getDepartmentName } from '../../lib/api';import { ArtObject } from '../../lib/types';
+import { getArtData, getDepartmentName } from '../../lib/api';
+import { ArtObject } from '../../lib/types';
 import ArtCard from './ArtCard';
 // נתונים קבועים להפעלה
 const DEPARTMENT_ID = '11'; // דוגמה: Department ID for European Paintings
